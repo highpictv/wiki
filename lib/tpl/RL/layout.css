@@ -25,7 +25,7 @@
 }
 
 div.stylefoot {
-  margin-left: 148px;
+  margin-left: 150px;
 }
   
 /* -------------- top row --------------- */
@@ -94,9 +94,9 @@ div.dokuwiki #bar__bottom {
 
 div.dokuwiki div.meta {
   clear: both;
-  margin-top: 1em;
+  margin-top: 0;
   color: __text_alt__;
-  font-size: 70%;
+  font-size: 100%;
 }
 
 div.dokuwiki div.meta div.user {
