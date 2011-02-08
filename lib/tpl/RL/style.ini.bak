@@ -44,8 +44,8 @@ __text_other__       = "#ccc"
 __background_other__ = "#f7f9fa"
 
 ; these are used for links
-__extern__    = "#256ab7"
-__existing__  = "#256ab7"
+__extern__    = "#436976"
+__existing__  = "#090"
 __missing__   = "#f30"
 
 ; highlighting search snippets
