@@ -2,10 +2,32 @@
  * CSS for the DokuWiki SidebarNG plugin
  */
 
+html>body div.dokuwiki div.left_sidebar {
+  position: fixed;
+}
+
+ 
 div.dokuwiki div.left_sidebar {
+  position: fixe;
+  top: 4px;
+  left: 6px;
   float: left;
-  width: 23%;
+  width: 136px;
   padding: 0.2em 0.5em 0 0;
+  background: #f6f6f6;
+  border: 1px solid __border__;
+  text-align: left;
+  font: 83% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  overflow: auto;
+  max-height: 95%;
+}
+
+div.dokuwiki div.left_sidebar p {
+  margin: 0.2em 0 0 0.2em;
+}
+
+div.dokuwiki div.left_sidebar img {
+  margin: 2px;
 }
 
 div.dokuwiki div.right_sidebar {
@@ -15,10 +37,9 @@ div.dokuwiki div.right_sidebar {
 }
 
 div.dokuwiki div.page_right {
-  width: 75%;
-  float: right;
-  border-left: 1px solid  __border__;
-  padding-left: 1%;
+  margin-left: 139px;
+  border: 1px solid  __border__;
+  padding: 0 5px 0 1%;
 }
 
 div.dokuwiki div.page_left {
@@ -41,5 +62,5 @@ div.dokuwiki div.right_sidebar div.sidebar_box {
 }
 
 div.dokuwiki div.sidebar_box ul {
-  margin-left: 1.2em;
+  margin: 0.3em 0 0.3em 1.3em;
 }
