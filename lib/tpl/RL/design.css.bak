@@ -296,7 +296,7 @@ div.dokuwiki a.interwiki:link {
 div.dokuwiki a.urlextern:visited,
 div.dokuwiki a.windows:visited,
 div.dokuwiki a.interwiki:visited {
-  color: __extern__;
+  color: purple;
 }
 div.dokuwiki a.urlextern:hover,
 div.dokuwiki a.urlextern:active,
@@ -304,7 +304,7 @@ div.dokuwiki a.windows:hover,
 div.dokuwiki a.windows:active,
 div.dokuwiki a.interwiki:hover,
 div.dokuwiki a.interwiki:active {
-  color: #0000ff;
+  color: __text__;
 }
 
 /* email link */
