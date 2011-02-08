@@ -15,6 +15,7 @@ body {
   color: __text__;
 }
 
+div.dokuwiki  div.page div.page_right {background: #f7f7f7;}
 /* the document */
 div.dokuwiki div.page {
   margin: 0 0 0 1em;
