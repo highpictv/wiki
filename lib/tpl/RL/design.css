@@ -282,6 +282,8 @@ div.dokuwiki a.windows {
 
 /* interwiki link (icon are set by dokuwiki) */
 div.dokuwiki a.interwiki {
+  background: none;
+  padding: 0;
 }
 
 /* link to some embedded media */
