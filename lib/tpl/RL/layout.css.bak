@@ -69,7 +69,6 @@ div.dokuwiki .logo a {
 
 /* ---------------  top and bottom bar ---------------- */
 div.dokuwiki .bar {
-  border-left: 1px solid __border__;
   border-top: 1px solid __border__;
   border-bottom: 1px solid __border__;
   background: __background_alt__;
