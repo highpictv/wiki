@@ -2,7 +2,7 @@
 /**
  * UTF8 helper functions
  *
- * @license    LGPL 2.1 (http://www.gnu.org/copyleft/lesser.html)
+ * @license    LGPL (http://www.gnu.org/copyleft/lesser.html)
  * @author     Andreas Gohr <andi@splitbrain.org>
  */
 
@@ -23,7 +23,7 @@ if(!function_exists('utf8_isASCII')){
     /**
      * Checks if a string contains 7bit ASCII only
      *
-     * @author Andreas Haerter <andreas.haerter@dev.mail-node.com>
+     * @author Andreas Haerter <netzmeister@andreas-haerter.de>
      */
     function utf8_isASCII($str){
         return (preg_match('/(?:[^\x00-\x7F])/', $str) !== 1);
@@ -90,9 +90,12 @@ if(!function_exists('utf8_strlen')){
      * @see    strlen()
      * @see    utf8_decode()
      */
+  if(defined('PUN_ROOT')){
+
     function utf8_strlen($string){
         return strlen(utf8_decode($string));
     }
+  }
 }
 
 if(!function_exists('utf8_substr')){
@@ -108,6 +111,7 @@ if(!function_exists('utf8_substr')){
      * @param integer (optional) length in UTF-8 characters from offset
      * @return mixed string or false if failure
      */
+  if(defined('PUN_ROOT')){
     function utf8_substr($str, $offset, $length = null) {
         if(UTF8_MBSTRING){
             if( $length === null ){
@@ -197,6 +201,7 @@ if(!function_exists('utf8_substr')){
         if (!preg_match('#'.$offset_pattern.$length_pattern.'#us',$str,$match)) return '';
         return $match[1];
     }
+  }
 }
 
 if(!function_exists('utf8_substr_replace')){
@@ -223,6 +228,7 @@ if(!function_exists('utf8_ltrim')){
      * @see    ltrim()
      * @return string
      */
+  if(defined('PUN_ROOT')){
     function utf8_ltrim($str,$charlist=''){
         if($charlist == '') return ltrim($str);
 
@@ -231,6 +237,7 @@ if(!function_exists('utf8_ltrim')){
 
         return preg_replace('/^['.$charlist.']+/u','',$str);
     }
+  }
 }
 
 if(!function_exists('utf8_rtrim')){
@@ -241,6 +248,7 @@ if(!function_exists('utf8_rtrim')){
      * @see    rtrim()
      * @return string
      */
+  if(defined('PUN_ROOT')){
     function  utf8_rtrim($str,$charlist=''){
         if($charlist == '') return rtrim($str);
 
@@ -249,6 +257,7 @@ if(!function_exists('utf8_rtrim')){
 
         return preg_replace('/['.$charlist.']+$/u','',$str);
     }
+  }
 }
 
 if(!function_exists('utf8_trim')){
@@ -259,11 +268,13 @@ if(!function_exists('utf8_trim')){
      * @see    trim()
      * @return string
      */
+  if(defined('PUN_ROOT')){
     function  utf8_trim($str,$charlist='') {
         if($charlist == '') return trim($str);
 
         return utf8_ltrim(utf8_rtrim($str,$charlist),$charlist);
     }
+  }
 }
 
 if(!function_exists('utf8_strtolower')){
@@ -276,12 +287,14 @@ if(!function_exists('utf8_strtolower')){
      * @see    strtolower()
      * @see    utf8_strtoupper()
      */
+  if(defined('PUN_ROOT')){
     function utf8_strtolower($string){
         if(UTF8_MBSTRING) return mb_strtolower($string,'utf-8');
 
         global $UTF8_UPPER_TO_LOWER;
         return strtr($string,$UTF8_UPPER_TO_LOWER);
     }
+  }
 }
 
 if(!function_exists('utf8_strtoupper')){
@@ -294,12 +307,14 @@ if(!function_exists('utf8_strtoupper')){
      * @see    strtoupper()
      * @see    utf8_strtoupper()
      */
+  if(defined('PUN_ROOT')){
     function utf8_strtoupper($string){
         if(UTF8_MBSTRING) return mb_strtoupper($string,'utf-8');
 
         global $UTF8_LOWER_TO_UPPER;
         return strtr($string,$UTF8_LOWER_TO_UPPER);
     }
+  }
 }
 
 if(!function_exists('utf8_ucfirst')){
@@ -434,6 +449,7 @@ if(!function_exists('utf8_strpos')){
      * @param  integer
      * @return integer
      */
+  if(defined('PUN_ROOT')){
     function utf8_strpos($haystack, $needle, $offset=0){
         $comp = 0;
         $length = null;
@@ -452,6 +468,7 @@ if(!function_exists('utf8_strpos')){
 
         return $length;
     }
+  }
 }
 
 if(!function_exists('utf8_tohtml')){
@@ -859,6 +876,7 @@ if(!function_exists('utf8_bad_replace')){
      * @param string to replace bad bytes with (defaults to '?') - use ASCII
      * @return string
      */
+  if(defined('PUN_ROOT')){
     function utf8_bad_replace($str, $replace = '') {
         $UTF8_BAD =
          '([\x00-\x7F]'.                          # ASCII (including control chars)
@@ -883,6 +901,7 @@ if(!function_exists('utf8_bad_replace')){
         ob_end_clean();
         return $result;
     }
+  }
 }
 
 if(!function_exists('utf8_correctIdx')){
